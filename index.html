@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Salary Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="/Users/johnson/Desktop/jquery-3.3.1.min.js"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+    <div class="headContainer">
+    <h1>Salary Calculator</h1>
+    </div>
+
+    <h3>Add Employee</h3>
+    <form class="inputForm">
+        <label for="firstName" ></label>
+        <input id="firstName" type="text" placeholder="First Name"/>
+        <label for="lastName"></label>
+        <input id="lastName" type="text" placeholder="Last Name"/>
+        <label for="ids"></label>
+        <input id="ids" type="text" placeholder="ID"/>
+        <label for="title"></label>
+        <input id="title" type="text" placeholder="Title"/>
+        <label for="annualSalary"></label>
+        <input id="annualSalary" type="text" placeholder="Annual Salary"/>
+        <button id="submitButton">Submit</button>
+    </form>
+
+    <h3>Employees</h3>
+
+    <div>
+        <table class="table" >
+        <thead id="tableHead">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>  
+        </thead>
+        <tbody id="tableBody">
+            <tr id="data">
+                <td >
+
+                </td>
+            </tr>  
+        </tbody>
+        </table>
+        <ul><h1 class="monthTotal"> Total Monthly: $15,000</h1></ul>
+    </div>
+
+    
+    
+</body>
+</html>
