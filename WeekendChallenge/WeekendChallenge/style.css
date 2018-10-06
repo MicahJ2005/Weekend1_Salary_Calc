@@ -1,0 +1,47 @@
+
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: right;
+}
+
+.headContainer{
+background-color: gray;
+height: 100%;
+text-align: middle;
+}
+
+#table{
+    width: 100%;
+}
+
+#tableHead{
+    background-color: lightgray;
+    border: 
+    padding: 10px;
+    border-width: 1px;
+    border-color: black;
+}
+
+#tableBody{
+    background-color: white;
+    border-style: solid;
+    padding: 30px;
+    border-width: 3px;
+    border-color: black;
+}
+
+td{
+    text-align: center;
+}
+
+#monthTotal{
+    text-align: right;
+}
+
+.over20K{
+    background-color: red;
+}
