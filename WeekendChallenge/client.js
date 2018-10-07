@@ -80,12 +80,12 @@ function onReady(){
         let salaryOutput = $('#totalAmount');
         let totalSalary = 0
         
-        salaryOutput.append('Total Amount:$', totalSalary.toFixed(2))
+        salaryOutput.append('Total Monthly:$', totalSalary.toFixed(2))
         salaryOutput.empty();
         for(let i=0; i<employeeList.length; i++){
         totalSalary += parseInt(employeeList[i].annualSalary);
         salaryOutput.empty();
-        salaryOutput.append('Total Amount:$', totalSalary.toFixed(2));
+        salaryOutput.append('Total Monthly:$', totalSalary.toFixed(2));
         
         }
 

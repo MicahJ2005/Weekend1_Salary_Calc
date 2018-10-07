@@ -1,4 +1,6 @@
-
+body{
+    background-image: linear-gradient(to bottom, lightgray, #cce6ff);
+}
 
 h1{
     text-align: center;
@@ -8,34 +10,39 @@ h2{
     text-align: right;
 }
 
+.head{
+    font-size: 40px;
+}
+
 .headContainer{
 background-color: gray;
 height: 100%;
-text-align: middle;
+text-align: center;
 }
 
 #table{
     width: 100%;
+    text-emphasis-color: white;
 }
 
 #tableHead{
-    background-color: lightgray;
-    border: 
-    padding: 10px;
-    border-width: 1px;
+    background-color: darkgray;
+    padding: 30px;
+    border-width: 10px;
     border-color: black;
 }
 
 #tableBody{
-    background-color: white;
     border-style: solid;
     padding: 30px;
-    border-width: 3px;
+    border-width: 30px;
     border-color: black;
+    background-color: cadetblue;
 }
 
 td{
     text-align: center;
+    border-color: black;
 }
 
 #monthTotal{
@@ -44,4 +51,17 @@ td{
 
 .red{
     background-color: red;
+}
+
+span{
+    border-color: black;
+
+}
+
+.inputForm{
+    text-align: center;
+}
+
+.foot{
+    background-color: white;
 }
