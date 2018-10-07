@@ -41,3 +41,7 @@ td{
 #monthTotal{
     text-align: right;
 }
+
+.red{
+    background-color: red;
+}

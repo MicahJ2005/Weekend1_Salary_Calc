@@ -1,6 +1,8 @@
 console.log('JS');
 
 let employeeList = [];
+let totalSalary = 0;
+let monthlybudget = 20000;
 
 class EmployeeInfo {
     constructor(firstName, lastName, ID, title, annualSalary){
@@ -20,8 +22,10 @@ function onReady(){
     
     $('#submitButton').on('click', addEmployee);
     $('#tableBody').on('click', '.deleteEmployee', deleteEmployee);
-    $('#submitButton').on('click', totalAmount);
+    
 
+    
+    
 
     function addEmployee(){
         event.preventDefault();
@@ -35,6 +39,7 @@ function onReady(){
         employeeList.push(newEmployee);
         console.log(employeeList);
         appendEmployeeList();
+        totalAmount();
         
         $('#firstName').val('');
         $('#lastName').val('');
@@ -51,7 +56,7 @@ function onReady(){
         for(let employee of employeeList){
             console.log(employee);
             inputElement.append(`<tr>`+`<td>` + employee.firstName + `</td>` + `` + `<td>` + employee.lastName + `</td>` + `` + `<td>` + employee.ID + `</td>`+ `` + `<td>` + employee.title + `</td>` + `` + `<td>` + employee.annualSalary + `<td class="textCenter"><button type="button" class="deleteEmployee">Delete</button></td>`+`<tr>`)
-            
+        
         }
     }
 
@@ -72,20 +77,27 @@ function onReady(){
 
     function totalAmount(){
         console.log('total amount');
-
-        let totalSalary = 0;
-
+        let salaryOutput = $('#totalAmount');
+        let totalSalary = 0
+        
+        salaryOutput.append('Total Amount:$', totalSalary.toFixed(2))
+        salaryOutput.empty();
         for(let i=0; i<employeeList.length; i++){
+        totalSalary += parseInt(employeeList[i].annualSalary);
+        salaryOutput.empty();
+        salaryOutput.append('Total Amount:$', totalSalary.toFixed(2));
         
-        totalSalary = parseInt(totalSalary + employeeList[i].annualSalary);
-        
-        newTotal = parseInt(totalSalary);
-
         }
-        console.log(newTotal);
-    }
+
+        if(totalSalary > monthlybudget){
+            salaryOutput.toggleClass('red');
+        }
+    }   
+     
+    
     
 
+    
 }
 
 
